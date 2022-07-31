@@ -19,13 +19,30 @@ export default function Form() {
   const [imc, setImc] = useState(null);
   const [textButton, setTextButton] = useState("Calcular");
   const [errorMessage, setErrorMessage] = useState(null);
-  const [imcList, setImcList] = useState([]);
+  const [diagnosticoImc, setDiagnosticoImc] = useState(null);
 
   function imcCalculator() {
     let heightFormat = altura.replace(",", ".");
     let totalImc = (peso / (heightFormat * heightFormat)).toFixed(2);
-    //criando um array para armazenar os imc's
-    setImcList((arr) => [...arr, { id: new Date().getTime(), imc: totalImc }]);
+
+    if (totalImc < 16) {
+      setDiagnosticoImc("Muito abaixo do peso");
+    } else if (totalImc < 17) {
+      setDiagnosticoImc("Moderadamente abaixo do peso");
+    } else if (totalImc < 18.5) {
+      setDiagnosticoImc("Abaixo do peso");
+    } else if (totalImc < 25) {
+      setDiagnosticoImc("Peso normal");
+    } else if (totalImc < 30) {
+      setDiagnosticoImc("Sobrepeso");
+    } else if (totalImc < 35) {
+      setDiagnosticoImc("Obesidade Grau I");
+    } else if (totalImc < 40) {
+      setDiagnosticoImc("Obesidade Grau II");
+    } else {
+      setDiagnosticoImc("Obesidade Grau III");
+    }
+
     setImc(totalImc);
   }
   function verificationImc() {
@@ -83,7 +100,12 @@ export default function Form() {
         </Pressable>
       ) : (
         <View style={styles.exibitionResultImc}>
-          <ResultImc messageResultImc={messageImc} resultImc={imc} />
+          <ResultImc
+            messageResultImc={messageImc}
+            resultImc={imc}
+            diagnosticoImc={diagnosticoImc}
+          />
+
           <TouchableOpacity
             style={styles.buttonCalculator}
             onPress={() => validationImc()}
@@ -92,20 +114,6 @@ export default function Form() {
           </TouchableOpacity>
         </View>
       )}
-
-      <FlatList //lista de imc's calculados
-        style={styles.listImc}
-        data={imcList.reverse()} //o último a ser calculado fica no topo
-        renderItem={({ item }) => {
-          return (
-            <Text style={styles.resultImcItem}>
-              <Text style={styles.textResultItemList}>Resultado IMC = </Text>
-              {item.imc}
-            </Text>
-          );
-        }}
-        keyExtractor={(item) => item.id}
-      />
     </View>
   );
 }

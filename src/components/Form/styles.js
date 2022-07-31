@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   formContext: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#e0e5e5",
     marginTop: 30,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,

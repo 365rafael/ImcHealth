@@ -3,16 +3,15 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   boxTitle: {
     alignItems: "center",
-    justifyContent: "center",
   },
   textTitle: {
-    color: "#000000",
-    fontSize: 24,
+    color: "#FFFFFF",
+    fontSize: 14,
     fontWeight: "bold",
     fontStyle: "italic",
   },
   textSubtitle: {
-    color: "#FF0043",
+    color: "#FFFFFF",
     fontSize: 18,
     fontWeight: "bold",
     fontStyle: "italic",
@@ -20,11 +19,10 @@ const styles = StyleSheet.create({
   boxLogo: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
   },
 });
 

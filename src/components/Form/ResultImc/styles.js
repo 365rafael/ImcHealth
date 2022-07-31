@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     fontSize: 16,
   },
+  diagnostico: {
+    fontSize: 18,
+    fontStyle: "italic",
+  },
 });
 
 export default styles;

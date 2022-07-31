@@ -8,11 +8,12 @@ export default function Title() {
       <View style={styles.boxLogo}>
         <Image
           source={require("../../../assets/icone.png")}
+          tintColor="#fff"
           style={styles.logo}
         />
-        <Text style={styles.textTitle}>@ACR-NUTRI</Text>
+        <Text style={styles.textTitle}>@ACNUTRI</Text>
       </View>
-      <Text style={styles.textSubtitle}>Calcule seu IMC</Text>
+      <Text style={styles.textSubtitle}>Calculadora de IMC</Text>
     </View>
   );
 }
