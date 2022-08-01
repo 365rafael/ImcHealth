@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     alignItems: "center",
-    paddingTop: 30,
+    paddingTop: 20,
   },
   form: {
     width: "100%",
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   buttonCalculator: {
+    marginTop: 30,
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
@@ -40,7 +41,6 @@ const styles = StyleSheet.create({
     paddingTop: 14,
     paddingBottom: 14,
     marginLeft: 12,
-    marginTop: 30,
   },
   errorMessage: {
     fontSize: 12,
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   exibitionResultImc: {
     width: "100%",
-    height: "50%",
+    height: "55%",
   },
   listImc: {
     marginTop: 20,
@@ -61,10 +61,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: "100%",
     paddingRight: 20,
-  },
-  textResultItemList: {
-    fontSize: 16,
-    color: "red",
   },
 });
 

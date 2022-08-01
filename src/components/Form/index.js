@@ -20,6 +20,8 @@ export default function Form() {
   const [textButton, setTextButton] = useState("Calcular");
   const [errorMessage, setErrorMessage] = useState(null);
   const [diagnosticoImc, setDiagnosticoImc] = useState(null);
+  const [pesoIdealInicial, setPesoIdealInicial] = useState(null);
+  const [pesoIdealFinal, setPesoIdealFinal] = useState(null);
 
   function imcCalculator() {
     let heightFormat = altura.replace(",", ".");
@@ -44,6 +46,7 @@ export default function Form() {
     }
 
     setImc(totalImc);
+    pesoIdealCalculator();
   }
   function verificationImc() {
     if (imc === null) {
@@ -67,6 +70,13 @@ export default function Form() {
       setTextButton("Calcular");
       setMessageImc("Preencha o peso e a altura");
     }
+  }
+
+  function pesoIdealCalculator() {
+    let pesoIdealInit = 18.5 * altura * altura;
+    let pesoIdealEnd = 24.9 * altura * altura;
+    setPesoIdealInicial(pesoIdealInit.toFixed(3));
+    setPesoIdealFinal(pesoIdealEnd.toFixed(3));
   }
 
   return (
@@ -104,6 +114,8 @@ export default function Form() {
             messageResultImc={messageImc}
             resultImc={imc}
             diagnosticoImc={diagnosticoImc}
+            pesoIdealInicial={pesoIdealInicial}
+            pesoIdealFinal={pesoIdealFinal}
           />
 
           <TouchableOpacity
