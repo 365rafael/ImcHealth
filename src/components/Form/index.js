@@ -73,8 +73,9 @@ export default function Form() {
   }
 
   function pesoIdealCalculator() {
-    let pesoIdealInit = 18.5 * altura * altura;
-    let pesoIdealEnd = 24.9 * altura * altura;
+    let heightFormat = altura.replace(",", ".");
+    let pesoIdealInit = 18.5 * heightFormat * heightFormat;
+    let pesoIdealEnd = 24.9 * heightFormat * heightFormat;
     setPesoIdealInicial(pesoIdealInit.toFixed(3));
     setPesoIdealFinal(pesoIdealEnd.toFixed(3));
   }
