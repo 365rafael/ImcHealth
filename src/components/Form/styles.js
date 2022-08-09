@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     width: "90%",
     borderRadius: 50,
     backgroundColor: "#f6f6f6",
-    height: 40,
+    height: 55,
     margin: 12,
     paddingLeft: 10,
   },
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   buttonCalculator: {
-    marginTop: 30,
+    marginTop: 50,
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   exibitionResultImc: {
     width: "100%",
-    height: "55%",
+    height: "65%",
   },
   listImc: {
     marginTop: 20,

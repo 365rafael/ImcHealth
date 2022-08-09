@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
   boxSharebutton: {
     width: "100%",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 10,
+    marginBottom: 10,
   },
   shared: {
     backgroundColor: "#1877f2",

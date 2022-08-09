@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Vibration,
   Pressable,
-  FlatList,
 } from "react-native";
 import ResultImc from "./ResultImc";
 import styles from "./styles";
@@ -27,7 +26,11 @@ export default function Form() {
     let heightFormat = altura.replace(",", ".");
     let totalImc = (peso / (heightFormat * heightFormat)).toFixed(2);
 
-    if (totalImc < 16) {
+    if (totalImc < 5) {
+      setDiagnosticoImc(
+        "Refaça o teste, pode ter esquecido de colocar a virgula"
+      );
+    } else if (totalImc < 16 && totalImc > 5) {
       setDiagnosticoImc("Muito abaixo do peso");
     } else if (totalImc < 17) {
       setDiagnosticoImc("Moderadamente abaixo do peso");
