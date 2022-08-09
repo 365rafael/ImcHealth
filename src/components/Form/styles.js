@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   buttonCalculator: {
-    marginTop: 50,
+    marginTop: 70,
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   exibitionResultImc: {
     width: "100%",
-    height: "65%",
+    height: "70%",
   },
   listImc: {
     marginTop: 20,

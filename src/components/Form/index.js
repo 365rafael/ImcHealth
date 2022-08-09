@@ -53,7 +53,7 @@ export default function Form() {
   }
   function verificationImc() {
     if (imc === null) {
-      Vibration.vibrate();
+      // Vibration.vibrate();
       setErrorMessage("Campo obrigatório*");
     }
   }

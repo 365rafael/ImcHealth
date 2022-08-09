@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontStyle: "italic",
     color: "#000000",
+    padding: 10,
   },
   pesoIdeal: {
     fontSize: 16,
